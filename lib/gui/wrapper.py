@@ -165,7 +165,7 @@ class FaceswapControl():
                   "bufsize": 1,
                   "universal_newlines": True}
 
-        self.process = Popen(args, **kwargs, stdin=PIPE)
+        self.process = Popen(args, **kwargs, stdin=PIPE, encoding='utf-8')
         self.thread_stdout()
         self.thread_stderr()
         logger.debug("Executed Faceswap")
